@@ -31,6 +31,10 @@
                 var page=urlParams.get("page");
                 var qStr=urlParams.toString();
                 var fallbackLink = 'https://edukitapp.com';
+                
+                if(app=='ojaank'){
+                    fallbackLink="https://play.google.com/store/apps/details?id=com.ojaankiasacademy.app";
+                }
                 // document.getElementById('redirectLink').click();
                 window.location.href=app+"://edukitapp.link/"+page+"?"+qStr
                 
