@@ -27,19 +27,12 @@
         <script type="text/javascript">
             (()=>{
                 var urlParams = new URLSearchParams(window.location.search);
-                var app=urlParams.app;
+                var app=urlParams.get("app");
+                var page=urlParams.get("page");
                 var qStr=urlParams.toString();
                 var fallbackLink = 'https://qeedagame.com/install-app/';
                 // document.getElementById('redirectLink').click();
-                if(urlParams.has("target")&&urlParams.get("target")=="order"){
-                    window.location.href=app+"://edukitapp.link/order?"+qStr;
-                }else if(urlParams.has("post")){
-                    window.location.href=app+"://edukitapp.link/contest?"+qStr;
-                }else if(urlParams.has("tId")){
-                    window.location.href=app+"://edukitapp.link/tournament?"+qStr;
-                }else{
-                    window.location.href=app+"://edukitapp.link/contestcat?"+qStr;
-                }
+                window.location.href=app+"://edukitapp.link/"+page+"?"+qStr
                 
                 window.setTimeout(function () { window.location.href=fallbackLink; }, 5000);
             })();
