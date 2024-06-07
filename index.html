@@ -27,7 +27,7 @@
         <script type="text/javascript">
             (()=>{
                 var urlParams = new URLSearchParams(window.location.search);
-                var app=window.location.pathname.replace("/", "");
+                var app=urlParams.app;
                 var qStr=urlParams.toString();
                 var fallbackLink = 'https://qeedagame.com/install-app/';
                 // document.getElementById('redirectLink').click();
